@@ -21,6 +21,8 @@ public class InheritanceDemo1 {
 		System.out.println(p1.showDetails());
 		
 		System.out.println(p1.getClass().getName());
+		
+		System.out.println(p1);
 
 	}
 

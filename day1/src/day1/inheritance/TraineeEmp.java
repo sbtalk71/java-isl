@@ -18,4 +18,10 @@ public class TraineeEmp extends Employee {
 		return super.showDetails()+" "+performance;
 	}
 	
+	@Override
+	public String toString() {
+		
+		return "This is Trainee Emp Class";
+	}
+	
 }
