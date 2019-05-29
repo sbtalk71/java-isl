@@ -1,6 +1,8 @@
 package day2.collections;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -24,11 +26,11 @@ public class MapDemo {
 		}
 
 		Map<Integer, Emp> empMap=new HashMap<>();
-		empMap.put(100, new Emp(100, "Pavan", "Hyderabad", 56000));
-		empMap.put(101, new Emp(101, "Chetan", "Bangalore", 56000));
-		empMap.put(102, new Emp(102, "Chandra", "Hyderabad", 56000));
-		empMap.put(103, new Emp(103, "Kiran", "Hyderabad", 56000));
-		empMap.put(104, new Emp(104, "Amit", "Hyderabad", 56000));
+		empMap.put(100, new Emp(100, "Pavan", "Hyderabad", 50000));
+		empMap.put(101, new Emp(101, "Chetan", "Bangalore", 66000));
+		empMap.put(102, new Emp(102, "Chandra", "Hyderabad", 51000));
+		empMap.put(103, new Emp(103, "Kiran", "Hyderabad", 86000));
+		empMap.put(104, new Emp(104, "Amit", "Hyderabad", 76000));
 		empMap.put(105, new Emp(105, "Shantanu", "Hyderabad", 56000));
 		
 		Set<Integer> empKeys=empMap.keySet();
@@ -37,6 +39,9 @@ public class MapDemo {
 			System.out.println(e.getEmpId()+" "+e.getName());
 		}
 		
+		Collection<Emp> empList=empMap.values();
+		
+		empList.stream().filter(e->e.getSalary()>60000).forEach(System.out::println);
 	}
 
 }
